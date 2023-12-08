@@ -2,9 +2,6 @@ import 'package:chatme_project/app/modules/loginPage/controllers/login_page_cont
 import 'package:chatme_project/app/routes/app_pages.dart';
 import 'package:chatme_project/core/constant/colors.dart';
 import 'package:chatme_project/core/constant/styles.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 

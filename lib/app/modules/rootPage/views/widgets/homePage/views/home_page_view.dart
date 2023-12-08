@@ -1,4 +1,3 @@
-import 'package:chatme_project/app/modules/rootPage/views/widgets/chatPage/views/chat_page_view.dart';
 import 'package:chatme_project/app/routes/app_pages.dart';
 import 'package:chatme_project/core/constant/colors.dart';
 import 'package:chatme_project/core/constant/styles.dart';
@@ -42,12 +41,12 @@ class HomePageView extends GetView<HomePageController> {
                     ),
                     child: Row(
                       children: [
-                        const Expanded(
+                        Expanded(
                           child: Icon(
                             Icons.chat_bubble_outline_sharp,
                             color: AppColors.white,
-                          ),
-                        ).marginSymmetric(horizontal: 15),
+                          ).marginSymmetric(horizontal: 15),
+                        ),
                         Expanded(
                           child: Text(
                             'All',
@@ -79,12 +78,12 @@ class HomePageView extends GetView<HomePageController> {
                     ),
                     child: Row(
                       children: [
-                        const Expanded(
+                        Expanded(
                           child: Icon(
                             Icons.add_to_photos_outlined,
                             color: AppColors.white,
-                          ),
-                        ).marginSymmetric(horizontal: 15),
+                          ).marginSymmetric(horizontal: 15),
+                        ),
                         Expanded(
                           child: Text(
                             'Live Chat',
@@ -116,12 +115,12 @@ class HomePageView extends GetView<HomePageController> {
                     ),
                     child: Row(
                       children: [
-                        const Expanded(
-                          child: Icon(
+                        Expanded(
+                          child: const Icon(
                             Icons.archive_outlined,
                             color: AppColors.white,
-                          ),
-                        ).marginSymmetric(horizontal: 15),
+                          ).marginSymmetric(horizontal: 15),
+                        ),
                         Expanded(
                           child: Text(
                             'Arcive Chat',
@@ -147,21 +146,25 @@ class HomePageView extends GetView<HomePageController> {
                   ),
                 ],
               ).marginOnly(left: 10)),
-          Row(
-            children: [
-              Expanded(
-                child: Text(
-                  "Unread",
-                  style: AppStyles.styleTextBody16(),
-                ).marginSymmetric(horizontal: 30),
-              ),
-              const Expanded(
-                child: Icon(
-                  Icons.keyboard_arrow_down,
-                  color: AppColors.white,
+          Container(
+            width: double.infinity,
+            height: 20,
+            child: Row(
+              children: [
+                Expanded(
+                  child: Text(
+                    "Unread",
+                    style: AppStyles.styleTextBody16(),
+                  ).marginSymmetric(horizontal: 30),
                 ),
-              ).marginOnly(left: 5),
-            ],
+                Expanded(
+                  child: const Icon(
+                    Icons.keyboard_arrow_down,
+                    color: AppColors.white,
+                  ).marginOnly(left: 120),
+                ),
+              ],
+            ),
           ),
           Expanded(
             child: ListView.builder(

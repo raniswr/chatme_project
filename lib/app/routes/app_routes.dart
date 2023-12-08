@@ -11,6 +11,8 @@ abstract class Routes {
   static const ROOT_PAGE = _Paths.ROOT_PAGE;
   static const PROFILE_PAGE = _Paths.PROFILE_PAGE;
   static const CHAT_PAGE = _Paths.CHAT_PAGE;
+  static const CONTACT_WIDGET = _Paths.CONTACT_WIDGET;
+  static const CONTACT_PAGE = _Paths.CONTACT_PAGE;
 }
 
 abstract class _Paths {
@@ -21,4 +23,6 @@ abstract class _Paths {
   static const ROOT_PAGE = '/root-page';
   static const PROFILE_PAGE = '/profile-page';
   static const CHAT_PAGE = '/chat-page';
+  static const CONTACT_WIDGET = '/contact-widget';
+  static const CONTACT_PAGE = '/contact-page';
 }

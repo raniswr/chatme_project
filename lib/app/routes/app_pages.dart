@@ -1,13 +1,16 @@
+import 'package:chatme_project/app/modules/rootPage/views/widgets/contactPage/bindings/contact_page_binding.dart';
+import 'package:chatme_project/app/modules/rootPage/views/widgets/contactPage/views/contact_page_view.dart';
 import 'package:get/route_manager.dart';
 
-import '../modules/rootPage/views/widgets/chatPage/bindings/chat_page_binding.dart';
-import '../modules/rootPage/views/widgets/chatPage/views/chat_page_view.dart';
 import '../modules/loginPage/bindings/login_page_binding.dart';
 import '../modules/loginPage/views/login_page_view.dart';
 import '../modules/registerPage/bindings/register_page_binding.dart';
 import '../modules/registerPage/views/register_page_view.dart';
 import '../modules/rootPage/bindings/root_page_binding.dart';
 import '../modules/rootPage/views/root_page_view.dart';
+import '../modules/rootPage/views/widgets/chatPage/bindings/chat_page_binding.dart';
+import '../modules/rootPage/views/widgets/chatPage/views/chat_page_view.dart';
+
 import '../modules/rootPage/views/widgets/homePage/bindings/home_page_binding.dart';
 import '../modules/rootPage/views/widgets/homePage/views/home_page_view.dart';
 import '../modules/rootPage/views/widgets/profilePage/bindings/profile_page_binding.dart';
@@ -51,6 +54,11 @@ class AppPages {
       name: _Paths.CHAT_PAGE,
       page: () => const ChatPageView(),
       binding: ChatPageBinding(),
+    ),
+    GetPage(
+      name: _Paths.CONTACT_PAGE,
+      page: () => const ContactPageView(),
+      binding: ContactPageBinding(),
     ),
   ];
 }

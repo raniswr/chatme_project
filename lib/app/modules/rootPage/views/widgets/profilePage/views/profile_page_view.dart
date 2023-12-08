@@ -48,7 +48,7 @@ class ProfilePageView extends GetView<ProfilePageController> {
                           color: AppColors.colorBox1,
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        child: Icon(
+                        child: const Icon(
                           Icons.phone,
                           color: AppColors.white,
                           size: 30,
@@ -61,7 +61,7 @@ class ProfilePageView extends GetView<ProfilePageController> {
                           color: AppColors.colorBox1,
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        child: Icon(
+                        child: const Icon(
                           Icons.videocam,
                           color: AppColors.white,
                           size: 30,
@@ -74,7 +74,7 @@ class ProfilePageView extends GetView<ProfilePageController> {
                           color: AppColors.colorBox1,
                           borderRadius: BorderRadius.circular(10),
                         ),
-                        child: Icon(
+                        child: const Icon(
                           Icons.volume_up,
                           color: AppColors.white,
                           size: 30,

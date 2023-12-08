@@ -40,34 +40,36 @@ class ChatPageView extends GetView<ChatPageController> {
           ]),
       body: Column(
         children: [
-          Expanded(
-            child: ListView.builder(
-                itemCount: 100,
-                shrinkWrap: true,
-                primary: true,
-                itemBuilder: (context, index) {
-                  if (index.isEven) {
-                    return Column(
-                      children: const [
-                        BubbleSpecialThree(
-                          text: 'Please try and give some feedback on it!',
-                          color: AppColors.lightPurple,
-                          tail: true,
-                          textStyle: TextStyle(color: Colors.white, fontSize: 16),
-                        ),
-                      ],
-                    );
-                  } else {
-                    //Bubble
-                    return const BubbleSpecialThree(
-                      text: "Thanks",
-                      color: Color(0xFFE8E8EE),
-                      tail: true,
-                      isSender: false,
-                    );
-                  }
-                }),
-          ),
+          GetBuilder<ChatPageController>(builder: (controller) {
+            return Expanded(
+              child: ListView.builder(
+                  itemCount: 100,
+                  shrinkWrap: true,
+                  primary: true,
+                  itemBuilder: (context, index) {
+                    if (index.isEven) {
+                      return Column(
+                        children: const [
+                          BubbleSpecialThree(
+                            text: 'Please try and give some feedback on it!',
+                            color: AppColors.lightPurple,
+                            tail: true,
+                            textStyle: TextStyle(color: Colors.white, fontSize: 16),
+                          ),
+                        ],
+                      );
+                    } else {
+                      //Bubble
+                      return const BubbleSpecialThree(
+                        text: "Thanks",
+                        color: Color(0xFFE8E8EE),
+                        tail: true,
+                        isSender: false,
+                      );
+                    }
+                  }),
+            );
+          }),
           Row(
             children: [
               Expanded(
